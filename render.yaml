@@ -1,0 +1,49 @@
+services:
+  - type: web
+    name: gold-flow-ai-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: MARKET_DATA_SOURCE
+        value: twelvedata
+      - key: TWELVEDATA_API_KEY
+        sync: false
+      - key: FRED_API_KEY
+        sync: false
+      - key: TRADING_ECONOMICS_API_KEY
+        sync: false
+      - key: TRADINGVIEW_WEBHOOK_TOKEN
+        generateValue: true
+      - key: ADMIN_API_TOKEN
+        generateValue: true
+      - key: DATABENTO_API_KEY
+        sync: false
+      - key: ORDER_FLOW_REQUIRED
+        value: "true"
+      - key: ORDER_FLOW_PROVIDER
+        value: none
+      - key: CORS_ORIGINS
+        value: https://kay222213.github.io
+      - key: MAX_QUOTE_AGE_SECONDS
+        value: "90"
+      - key: MAX_M5_CANDLE_AGE_SECONDS
+        value: "600"
+      - key: MAX_M15_CANDLE_AGE_SECONDS
+        value: "1800"
+      - key: MAX_H1_CANDLE_AGE_SECONDS
+        value: "7200"
+      - key: MAX_H4_CANDLE_AGE_SECONDS
+        value: "28800"
+      - key: BROKER_TICK_SIZE
+        sync: false
+      - key: BROKER_TICK_VALUE_ACCOUNT_CCY
+        sync: false
+      - key: BROKER_VOLUME_MIN
+        sync: false
+      - key: BROKER_VOLUME_MAX
+        sync: false
+      - key: BROKER_VOLUME_STEP
+        sync: false
+      - key: BROKER_ACCOUNT_CURRENCY
+        value: ZAR

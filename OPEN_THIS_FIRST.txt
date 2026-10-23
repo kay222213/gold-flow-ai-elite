@@ -1,0 +1,15 @@
+GOLD FLOW AI — PHONE-FIRST BUILD
+
+This project is designed to be opened and installed on your phone as a web app (PWA).
+
+IMPORTANT:
+• A ZIP file cannot itself install a live trading dashboard. The frontend must be hosted over HTTPS.
+• The live dashboard needs a deployed backend URL, market/macro provider credentials, a licensed order-flow feed, and the exact broker XAUUSD contract specifications. Until required inputs are connected and verified, it intentionally shows NO TRADE.
+• Price levels are not executable quotes. Spot feeds may be indicative; always verify the current broker spread and price before placing a manual trade.
+• Risk percentage controls cash-risk sizing; it does not change the chart's structural stop or liquidity target.
+• The updated engine refuses to claim monetary risk is verified if broker tick/volume specifications are missing.
+• On iPhone: open the hosted frontend in Safari → Share → Add to Home Screen.
+• On Android: open the hosted frontend in Chrome → Install app / Add to Home screen.
+• Do not paste API keys into the frontend or send them in chat.
+
+The frontend is in frontend/. The API is in backend/. Deployment uses the included Render and GitHub Pages configuration.
